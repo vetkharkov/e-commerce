@@ -5,4 +5,7 @@ composer require barryvdh/laravel-debugbar --dev
 
 -------------livewire------------
 php artisan make:livewire HomeComponent
+php artisan make:livewire ShopComponent
+php artisan make:livewire CartComponent
+php artisan make:livewire CheckoutComponent
 
