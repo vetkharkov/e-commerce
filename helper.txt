@@ -1,0 +1,8 @@
+Install The Package
+
+composer require livewire/livewire
+composer require barryvdh/laravel-debugbar --dev
+
+-------------livewire------------
+php artisan make:livewire HomeComponent
+
