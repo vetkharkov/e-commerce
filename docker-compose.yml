@@ -59,6 +59,23 @@ services:
     networks:
       - app-network
 
+  #Nginx Service
+  nodejs:
+    image: node:latest
+    container_name: "${DOCKER_PREFIX}-node"
+    restart: unless-stopped
+    working_dir: /var/www
+    tty: true
+    # enable watch poll mode if not supported by js builder.
+    #    environment:
+    #      CHOKIDAR_USEPOLLING: 1
+    ports:
+      - "3000:6001"
+    volumes:
+      - ./src:/var/www/
+    networks:
+      - app-network
+
 #Docker Networks
 networks:
   app-network:

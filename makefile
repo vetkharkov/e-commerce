@@ -4,6 +4,7 @@ include .env
 container_php       = $(DOCKER_PREFIX)-app
 container_db        = $(DOCKER_PREFIX)-db
 container_server    = $(DOCKER_PREFIX)-webserver
+container_node      = $(DOCKER_PREFIX)-node
 
 stop_all: #stop all container
 	docker stop $(docker ps -a -q)
@@ -60,3 +61,6 @@ connect_db: #Connect to DB container
 
 connect_server: #Connect to container_server container
 	docker exec -it $(container_server) /bin/sh
+
+connect_node: #Connect to Node JS container
+	docker exec -it $(container_node) /bin/bash

@@ -2,10 +2,26 @@ Install The Package
 
 composer require livewire/livewire
 composer require barryvdh/laravel-debugbar --dev
+composer require laravel/jetstream
+
 
 -------------livewire------------
 php artisan make:livewire HomeComponent
 php artisan make:livewire ShopComponent
 php artisan make:livewire CartComponent
 php artisan make:livewire CheckoutComponent
+php artisan make:livewire Admin/AdminDashboardComponent
+php artisan make:livewire User/UserDashboardComponent
+
+
+------------jetstream------------
+php artisan jetstream:install livewire
+
+
+
+-------------Middleware-------------
+php artisan make:middleware AuthAdmin
+
+
+
 
